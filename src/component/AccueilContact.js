@@ -27,9 +27,15 @@ export default class AccueilContact extends Component {
   };
   constructor(props) {
     super(props);
+    console.log(props);
     this.state.listcontact = contacts;
+    this._onPress = this._onPress.bind(this);
   }
-
+  _onPress(item) {
+    this.props.navigation.navigate('DetailsContact', {
+      list: item,
+    });
+  }
   render() {
     return (
       <TouchableWithoutFeedback onPress={Keyboard.dismiss} style={{flex: 1}}>
@@ -44,11 +50,7 @@ export default class AccueilContact extends Component {
                 renderItem={({item}) => (
                   <TouchableOpacity
                     key={'contact_' + item.id}
-                    onPress={() => {
-                      this.props.navigation.navigate('DetailsContact', {
-                        contact: item,
-                      });
-                    }}>
+                    onPress={() => this._onPress(item)}>
                     <View>
                       <View
                         style={{
@@ -60,7 +62,13 @@ export default class AccueilContact extends Component {
                         <View />
                         <Image
                           source={require('../img/unnamed.png')}
-                          style={{width: 60, height: 60, marginBottom: 20, borderRadius: 30, marginTop: 20}}
+                          style={{
+                            width: 60,
+                            height: 60,
+                            marginBottom: 20,
+                            borderRadius: 30,
+                            marginTop: 20,
+                          }}
                         />
                         <View>
                           <Text

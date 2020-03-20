@@ -27,8 +27,8 @@ import DetailsContact from './src/component/DetailsContact';
 
 const Stack = createStackNavigator();
 
-function Acceuil({naviagtion}) {
-  return <AccueilContact />;
+function Acceuil({navigation}) {
+  return <AccueilContact navigation={navigation} />;
 }
 function Details({navigation, route}) {
   navigation.setOptions({title: route.params.name});
