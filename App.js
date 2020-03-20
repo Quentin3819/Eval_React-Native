@@ -53,7 +53,7 @@ export default class App extends Component {
             }}
           />
           <Stack.Screen
-              name="DetailsContact"
+              name="Details Contact"
               component={Details}
               options={{
                 //headerMode: 'none',

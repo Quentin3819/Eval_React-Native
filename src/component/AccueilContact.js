@@ -32,7 +32,7 @@ export default class AccueilContact extends Component {
     this._onPress = this._onPress.bind(this);
   }
   _onPress(item) {
-    this.props.navigation.navigate('DetailsContact', {
+    this.props.navigation.navigate('Details Contact', {
       list: item,
     });
   }

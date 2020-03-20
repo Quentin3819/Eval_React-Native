@@ -42,7 +42,8 @@ export default class AccueilContact extends Component {
         <SafeAreaView style={{flex: 1}}>
           <Text style={{fontSize: 40}}>
             {' '}
-            Salut Batiste, désolé j'ai pas eu le Temps de faire cette page :(
+            Salut Batiste, désolé j'ai pas eu le Temps de faire cette page :(.
+            Bon Courage pour la correction :D
           </Text>
         </SafeAreaView>
       </TouchableWithoutFeedback>
