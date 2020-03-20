@@ -27,7 +27,6 @@ export default class AccueilContact extends Component {
   };
   constructor(props) {
     super(props);
-    console.log(props);
     this.state.listcontact = contacts;
     this._onPress = this._onPress.bind(this);
   }
